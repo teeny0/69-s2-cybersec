@@ -1,7 +1,7 @@
 services:
   db:
     image: postgres:17
-    container_name: postgres-db
+    container_name: 69-s2-db
     restart: always
 
     environment:
@@ -10,15 +10,14 @@ services:
       POSTGRES_DB: cybersec
 
     ports:
-      - "5432:5432"
+      - "54321:5432"
 
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  pgadmin:
+  admin:
     image: dpage/pgadmin4
-    container_name: pgadmin
-
+    container_name: 69-s2-admin
     restart: always
 
     environment:
@@ -27,6 +26,28 @@ services:
 
     ports:
       - "8080:80"
+
+    depends_on:
+      - db
+
+    volumes:
+      - ./data-pgadmin:/var/lib/pgadmin
+
+  app:
+    image: prawee/strapi
+    container_name: 69-s2-app
+    restart: always
+
+    ports:
+      - "9092:1337"
+
+    environment:
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_NAME: cybersec
+      DATABASE_USERNAME: PostgreSQL
+      DATABASE_PASSWORD: 1234
 
     depends_on:
       - db
