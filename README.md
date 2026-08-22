@@ -1,6 +1,4 @@
 # Cyber Security
 
 ## My Information
-- Prawee Wongsa
-- 48XXXXXXXXXXX
-- I known about cyber security
+- 0568604050xxx อยากได้สิ่งที่นำไปใช้จริงได้
