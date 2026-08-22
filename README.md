@@ -1,6 +1,6 @@
-# Cyber-Security
-Homework
+# Cyber Security
 
-
-0568604050xxx
-อยากได้สิ่งที่นำไปใช้จริงได้
+## My Information
+- Prawee Wongsa
+- 48XXXXXXXXXXX
+- I known about cyber security
